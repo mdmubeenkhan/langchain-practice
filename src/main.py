@@ -16,7 +16,8 @@ def main():
             "system",
             "You are a helpful assistant who is knowledgeable and answers user question",
         ),
-        ("human", "write simple hello world in python"),
+        ("human", "do you remember my name"
+        ""),
     ]
     ai_msg = llm.invoke(messages)
     print()
