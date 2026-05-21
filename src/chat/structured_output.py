@@ -14,7 +14,7 @@ chat_template = ChatPromptTemplate([
 
 #load chat history
 chat_history=[]
-with open
+# with open
 
 
 # format the prompt

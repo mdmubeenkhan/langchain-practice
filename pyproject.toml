@@ -12,4 +12,5 @@ dependencies = [
     "langchain-ollama>=1.1.0",
     "meteostat>=2.1.4",
     "python-dotenv>=1.2.2",
+    "tavily>=1.1.0",
 ]

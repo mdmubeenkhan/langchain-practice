@@ -3,6 +3,11 @@ import urllib.request
 import meteostat as ms
 from langchain.tools import tool
 from datetime import datetime
+from typing import Dict, Any
+from tavily import TavilyClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 @tool
 def mubeen_details() -> str:
@@ -39,3 +44,11 @@ def fetch_hyderabad_weather_details() -> str:
         return result
     
     return "Unable to fetch temperature data for Hyderabad"
+
+@tool
+def web_search(query: str) -> Dict[str, Any]:
+    """Search the web for information"""
+    tavily_client = TavilyClient()
+    return tavily_client.search(query)
+
+
