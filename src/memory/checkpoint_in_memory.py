@@ -2,6 +2,9 @@ from langchain.agents import create_agent
 from langgraph.checkpoint.memory import InMemorySaver
 from agent_tools import mubeen_details, fetch_hyderabad_weather_details
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # langgraph = A library for building stateful, multi-step workflows
 # checkpoint = A snapshot of the agent's state at a point in time

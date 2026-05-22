@@ -3,7 +3,7 @@ import urllib.request
 import meteostat as ms
 from langchain.tools import tool
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Any, List
 from tavily import TavilyClient
 from dotenv import load_dotenv
 
@@ -46,9 +46,15 @@ def fetch_hyderabad_weather_details() -> str:
     return "Unable to fetch temperature data for Hyderabad"
 
 @tool
-def web_search(query: str) -> Dict[str, Any]:
-    """Search the web for information"""
-    tavily_client = TavilyClient()
-    return tavily_client.search(query)
+def web_search_for_latest_information(query):
+    """Search the web for current information"""
+
+    # query = [" ".join(each) for each in query]
+    print()
+    print("=========")
+    print(f"query for web search = {query}")
+    # tavily_client = TavilyClient()
+    # return tavily_client.search(query)
+    return "current chief minister of west bengal is mubeen"
 
 
